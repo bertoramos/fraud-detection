@@ -21,6 +21,17 @@ This dataset was loaded into a database with the following structure, in order t
 
 To avoid extra costs we run the Glue jobs in a Docker container. AWS Glue provides Docker container images that enable developers to build and test their ETL (Extract, Transform, Load) jobs in local development environments. Follow instructions in [[2]](#glue-docker) for more details.
 
+### XBoost SageMaker
+
+The `training/training.ipynb` notebook shows an example of the XBoost training pipeline using SageMaker. As with ETL, we run the glue jobs locally to avoid additional costs.
+
+Before run training code run following commands : 
+
+1. `conda create --prefix=env python=3.10`
+2. `conda activate .\env`
+3. `conda install -c conda-forge sagemaker`
+4. `docker pull <image_uri>`
+
 # References
 
 - <a name="dataset_ref">**[1]**</a> Janaviciute, Audrone; Liutkevicius, Agnius (2023), *"Fraudulent and Legitimate Online Shops Dataset"*, Mendeley Data, V1, doi: 10.17632/m7xtkx7g5m.1
